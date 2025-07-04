@@ -43,7 +43,7 @@ async def on_ready():
 @app_commands.describe(dado="Qual dado você quer rolar? Ex: d6, d10, d20")
 async def roll(interaction: discord.Interaction, dado: str):
     dado = dado.lower()
-    if dado not in ['d6', 'd10', 'd20']:
+    if dado not in ['6', '10', '20']:
         await interaction.response.send_message("⚠️ Só aceito d6, d10 ou d20, beleza?", ephemeral=True)
         return
 
